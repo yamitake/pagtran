@@ -1,6 +1,6 @@
 $(function(){
   $(document).on('page:before-change' , function(){
-    $("html").addClass('animated bounceOutLeft');
+    $("html").addClass('animated flipOutY');
     console.log('page:before-change');
   });
   $(document).on('page:receive', function(){
@@ -14,7 +14,8 @@ $(function(){
   });
   $(document).on('page:load', function(){
     console.log('page:load');
-    $("html").removeClass('bounceOutLeft').addClass('bounceInLeft');
+    //$("html").removeClass('bounceOutLeft').addClass('bounceInLeft');
+    $("html").removeClass('flipOutY').addClass('flipInY');
   });
   $(document).on('page:restore', function(){
     console.log('page:restore');

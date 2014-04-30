@@ -7,6 +7,7 @@ gem 'rails', '4.0.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -47,5 +48,6 @@ end
 #Rails 4 Asset Pipeline on Heroku https://devcenter.heroku.com/articles/rails-4-asset-pipeline
 gem 'rails_12factor', group: :production
 
+gem 'compass-rails'
 gem 'rack-mini-profiler'
 gem 'meta-tags', :require => 'meta_tags'

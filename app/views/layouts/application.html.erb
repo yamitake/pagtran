@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html id="animated" lang="ja">
 <head>
   <title>Pagtran</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= display_meta_tags({
+        :title => ''  ,
+        :site => Pagtran ,
+        :description => "rails4のturbolinksとanimation.cssを使った画面遷移 Pagtranの名前は適当" ,
+        :keywords => 'animation.css rails4 rails ',
+        :open_graph => {
+           :title => 'Pagtran rails4のturbolinksとanimation.cssを使った画面遷移',
+           :description => "rails4でturbolinksを用いて頑張りました。" ,
+           :type => 'article' ,
+           :url   => root_url ,
+        },
+       :viewport => "width=device-width, initial-scale=1.0" ,
+       :reverse => true
+    })
+  %>
 </head>
 <body>
 
