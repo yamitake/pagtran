@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   before_action :sleeptime
+  before_action :remember_effect
   def index
   end
 
@@ -16,5 +17,10 @@ class WelcomeController < ApplicationController
       time = 10 if  time > 10
       logger.debug "sleep #{time}"
       sleep time
+    end
+
+    def remember_effect
+      session[:in]  = params[:in] if params[:in]
+      session[:out] = params[:in] if params[:out]
     end
 end

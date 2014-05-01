@@ -3,3 +3,8 @@
 html#animated{
   @include transition-duration(10s);
 }
+
+
+div.container{
+  @include transition-duration(10s);
+}
