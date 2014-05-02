@@ -24,18 +24,40 @@
 <body>
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid animated">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <a class="navbar-brand" href="">Pagtran</a>
+        <a class="navbar-brand" href=".">Pagtran</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <%= link_to "to github" , "https://github.com/yamitake/pagtran" , target: "_blank" %>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 
 
 
-
-<%= render "effect_selecter" %>
-<%= render "links" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel">
+        <h3>
+          rails turbolinks + Animate.css Page transition.
+        </h3>
+        <p>
+          このページはrailsのturbolinksを用いた画面遷移とAnimate.cssを合わせて使ったテストページになります。
+          エフェクトを選択し、ボタンで画面遷移をすると試す事ができます。
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <%= render "effect_selecter" %>
+      <%= render "links" %>
+    </div>
+  </div>
+</div>
 
 <%= yield %>
 

@@ -1,14 +1,20 @@
-<div class="container">
-  <h5>ノータイム</h5>
+<div class="button-groups">
+  <h6>ノータイム</h6>
   <%= link_to "index" , root_path , class: "btn btn-info" %>
   <%= link_to "index2" , welcome_index2_path , class: "btn btn-default" %>
   <%= link_to "index3" , welcome_index3_path , class: "btn btn-warning" %>
-  <h5> + 1s seconds<h5>
+  <%= link_to "index4" , welcome_index4_path , class: "btn btn-info" %>
+  <%= link_to "index5" , welcome_index5_path , class: "btn btn-success" %>
+  <h6> + 1s seconds<h6>
   <%= link_to "index" , root_path({sleeptime: 1}) , class: "btn btn-info" %>
   <%= link_to "index2" , welcome_index2_path({sleeptime: 1}) , class: "btn btn-default" %>
   <%= link_to "index3" , welcome_index3_path({sleeptime: 1}) , class: "btn btn-warning" %>
-  <h5> + 5s seconds<h5>
+  <%= link_to "index4" , welcome_index4_path({sleeptime: 5}) , class: "btn btn-info" %>
+  <%= link_to "index5" , welcome_index5_path({sleeptime: 5}) , class: "btn btn-success" %>
+  <h6> + 5s seconds<h6>
   <%= link_to "index" , root_path({sleeptime: 5}) , class: "btn btn-info" %>
   <%= link_to "index2" , welcome_index2_path({sleeptime: 5}) , class: "btn btn-default" %>
   <%= link_to "index3" , welcome_index3_path({sleeptime: 5}) , class: "btn btn-warning" %>
+  <%= link_to "index4" , welcome_index4_path({sleeptime: 5}) , class: "btn btn-info" %>
+  <%= link_to "index5" , welcome_index5_path({sleeptime: 5}) , class: "btn btn-success" %>
 </div>
