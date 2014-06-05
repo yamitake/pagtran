@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails turbolinks
++
+Animate.css http://daneden.github.io/animate.css/
 
-Things you may want to cover:
+turbolinks sample rails application.
 
 * Ruby version
+2.1.1
 
 * System dependencies
 
 * Configuration
 
+
 * Database creation
+なし
 
 * Database initialization
+なし
 
 * How to run the test suite
+rails s で普通に動きます。
+herokuにpushしてもそのまま動きます。
 
 * Services (job queues, cache servers, search engines, etc.)
+なし
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+fork please.

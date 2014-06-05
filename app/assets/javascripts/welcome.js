@@ -1,16 +1,26 @@
 $(function(){
-  $(document).on("change" , "#in_effect" , function(){
-    $("html").removeClass(in_class);
-    in_class = $(this).val();
-  });
-  $(document).on("change" , "#out_effect" , function(){
-    $("html").removeClass(out_class);
-    out_class = $(this).val();
-  });
+  /**
+   * get parameter取得用
+   */
+  function getParams(url)
+  {
+      var vars = new Object();
+      var hashes = url.slice(url.indexOf('?') + 1).split('&');
+      var length = hashes.length;
+      for(var i = 0; i < length; i++) {
+          var hash = hashes[i].split('=');
+          vars[hash[0]] = hash[1];
+      }
+      return vars;
+  }
 
-  //page更新時に選択している値にする。本来はサーバでやった方がいいと思う。
-  $(document).on('page:update' , function(){
-    $("#out_effect").val(out_class);
-    $("#in_effect").val(in_class);
+  $('a').click(function(){
+    vars = getParams($(this).attr("href"));
+    //reset style
+    $("html").removeClass(in_class);
+    $("html").removeClass(out_class);
+    in_class = vars["i"];
+    out_class = vars["o"];
+    //アニメーションのフックは,app/assets/javascripts/shared/page_transition.js
   });
 });

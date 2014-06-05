@@ -1,20 +1,75 @@
+<% in_effects = ["bounceIn",
+      "bounceInDown",
+      "bounceInLeft",
+      "bounceInRight",
+      "bounceInUp",
+      "bounce",
+      "flash",
+      "pulse",
+      "rubberBand",
+      "shake",
+      "swing",
+      "tada",
+      "wobble",
+      "flip",
+      "hinge",
+      "rollIn",
+      "flipInX",
+      "flipInY",
+      "fadeIn",
+      "fadeInDown",
+      "fadeInDownBig",
+      "fadeInLeft",
+      "fadeInLeftBig",
+      "fadeInRight",
+      "fadeInRightBig",
+      "fadeInUp",
+      "fadeInUpBig",
+      "rotateIn",
+      "rotateInDownLeft",
+      "rotateInDownRight",
+      "rotateInUpLeft",
+      "rotateInUpRight",
+      "lightSpeedIn"] %>
+
+<% out_effects = ["bounceOut",
+"bounceOutDown",
+"bounceOutLeft",
+"bounceOutRight",
+"bounceOutUp",
+"fadeOut",
+"fadeOutDown",
+"fadeOutDownBig",
+"fadeOutLeft",
+"fadeOutLeftBig",
+"fadeOutRight",
+"fadeOutRightBig",
+"fadeOutUp",
+"fadeOutUpBig",
+"flipOutX",
+"flipOutY",
+"lightSpeedOut",
+"rotateOut",
+"rotateOutDownLeft",
+"rotateOutDownRight",
+"rotateOutUpLeft",
+"rotateOutUpRight",
+"rollOut",
+"bounce",
+"flash",
+"pulse",
+"rubberBand",
+"shake",
+"swing",
+"tada",
+"wobble",
+"flip",
+"hinge"] %>
+
 <div class="button-groups">
-  <h6>ノータイム</h6>
-  <%= link_to "index" , root_path , class: "btn btn-info" %>
-  <%= link_to "index2" , welcome_index2_path , class: "btn btn-default" %>
-  <%= link_to "index3" , welcome_index3_path , class: "btn btn-warning" %>
-  <%= link_to "index4" , welcome_index4_path , class: "btn btn-info" %>
-  <%= link_to "index5" , welcome_index5_path , class: "btn btn-success" %>
-  <h6> + 1s seconds<h6>
-  <%= link_to "index" , root_path({sleeptime: 1}) , class: "btn btn-info" %>
-  <%= link_to "index2" , welcome_index2_path({sleeptime: 1}) , class: "btn btn-default" %>
-  <%= link_to "index3" , welcome_index3_path({sleeptime: 1}) , class: "btn btn-warning" %>
-  <%= link_to "index4" , welcome_index4_path({sleeptime: 5}) , class: "btn btn-info" %>
-  <%= link_to "index5" , welcome_index5_path({sleeptime: 5}) , class: "btn btn-success" %>
-  <h6> + 5s seconds<h6>
-  <%= link_to "index" , root_path({sleeptime: 5}) , class: "btn btn-info" %>
-  <%= link_to "index2" , welcome_index2_path({sleeptime: 5}) , class: "btn btn-default" %>
-  <%= link_to "index3" , welcome_index3_path({sleeptime: 5}) , class: "btn btn-warning" %>
-  <%= link_to "index4" , welcome_index4_path({sleeptime: 5}) , class: "btn btn-info" %>
-  <%= link_to "index5" , welcome_index5_path({sleeptime: 5}) , class: "btn btn-success" %>
+  <% in_effects.each do |in_effect| %>
+    <%= out_effects.each do |out_effect| %>
+      <%= link_to "#{in_effect} + #{out_effect}" , root_path({i: in_effect , o: out_effect}) , class: "btn btn-info" %>
+    <% end %>
+  <% end %>
 </div>
