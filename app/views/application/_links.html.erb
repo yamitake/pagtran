@@ -68,8 +68,10 @@
 
 <div class="button-groups">
   <% in_effects.each do |in_effect| %>
-    <%= out_effects.each do |out_effect| %>
-      <%= link_to "#{in_effect} + #{out_effect}" , root_path({i: in_effect , o: out_effect}) , class: "btn btn-info" %>
+    <% out_effects.each do |out_effect| %>
+      <div class="col-md-3">
+        <%= link_to "#{in_effect} + #{out_effect}" , root_path({i: in_effect , o: out_effect}) , class: "btn btn-small btn-#{['info','danger','warning','success'].sample}" %>
+      </div>
     <% end %>
   <% end %>
 </div>

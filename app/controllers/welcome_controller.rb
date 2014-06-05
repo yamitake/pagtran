@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
 
   private
     def sleeptime
-      time = params[:sleeptime] ? params[:sleeptime].to_i : 0
+      time = params[:sleeptime] ? params[:sleeptime].to_i : 1
       # max sleep time is 10s
       time = 10 if  time > 10
       logger.debug "sleep #{time}"
